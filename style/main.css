@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#words-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+section {
+    width: 50%;
+    gap: 2rem;
+}
+
+.word {
+    margin: 1% 0;
+}
+
+.letter-box {
+    display: flex;
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter-box label {
+    font-size: 45px;
+}
