@@ -1,8 +1,8 @@
 const number_of_tries=6;
 
-function create_word_section() {
+function create_word_sections() {
     let containerElement = document.getElementById("words-container");
-    for (let i=0;i<6;i++) {
+    for (let i = 0;i < number_of_tries; i++) {
         let sectionElement = document.createElement("section");
         sectionElement.className = "word d-flex flex-row";
 
@@ -25,23 +25,29 @@ function create_word_section() {
     }
 }
 
-function create_word_sections2() {
+create_word_sections()
+
+
+// this side is not used now
+// here is the same functionality without dynamic element creation
+// this is taking the htmlString into account to create whole section element with its childs under
+function create_word_sections_alternative() {
     const parser = new DOMParser();
     let htmlString = `<section class="word d-flex flex-row">
         <div class="letter-box">
-            <label></label>
+            <label class="letter"></label>
         </div>
         <div class="letter-box">
-            <label></label>
+            <label class="letter"></label>
         </div>
         <div class="letter-box">
-            <label></label>
+            <label class="letter"></label>
         </div>
         <div class="letter-box">
-            <label></label>
+            <label class="letter"></label>
         </div>
         <div class="letter-box">
-            <label></label>
+            <label class="letter"></label>
         </div>
     </section>`
     sectionElement = parser.parseFromString(htmlString, "text/html");
@@ -53,9 +59,3 @@ function create_word_sections2() {
         containerElement.insertAdjacentHTML("beforeend", htmlString)
     }
 }
-
-function sayHello() {
-    console.log("Hello from cem");
-}
-
-create_word_section()

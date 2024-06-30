@@ -16,6 +16,7 @@ section {
     gap: 2rem;
 }
 
+
 .word {
     margin: 1% 0;
 }
@@ -31,4 +32,17 @@ section {
 
 .letter-box label {
     font-size: 45px;
+}
+
+
+.matched {
+    background-color: green;
+}
+
+.included {
+    background-color: yellow;
+}
+
+.missed {
+    background-color: lightcoral;
 }
